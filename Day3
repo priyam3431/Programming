@@ -1,0 +1,14 @@
+//This code simplifies that printing the special characters....
+
+#include <stdio.h>
+
+int main()
+{
+  printf("\\ / \\\n");  //output:\ / \
+
+  printf("\"Hello\"\n"); //output:"Hello"
+
+  printf("\\n"); //output:\n
+
+    return 0;
+}
