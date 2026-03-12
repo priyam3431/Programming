@@ -1,3 +1,7 @@
+//C is a procedural programming language developed in 1972 by Dennis Ritchie at Bell Labs.
+//C language allows programmers to write instructions that the computer can understand and execute.
+
+
 #include<stdio.h>
 int main(){
 printf("Hello World!");
