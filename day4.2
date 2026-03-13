@@ -1,0 +1,24 @@
+
+
+#include <stdio.h>
+
+int main() {
+    int a = 5, b = 10;
+
+    // Before Swapping
+    printf("Before Swapping:\n");
+    printf("a = %d\n", a);
+    printf("b = %d\n", b);
+
+    // Swapping without third variable
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    // After Swapping
+    printf("\nAfter Swapping:\n");
+    printf("a = %d\n", a);
+    printf("b = %d\n", b);
+
+    return 0;
+}
