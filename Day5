@@ -1,0 +1,17 @@
+//without using the addition operatiion...
+
+#include <stdio.h>
+
+int main()
+{
+    int a=10,b=5;
+    printf("Before swapping a=%d and b=%d\n",a,b);
+    int c;
+    c=a*b;
+    b=c/b;
+    a=c/b;
+   
+    printf("After swapping a=%d and b=%d",a,b);
+
+    return 0;
+}
