@@ -1,0 +1,13 @@
+//this code increment value by 1
+
+#include <stdio.h>
+
+int main()
+{
+    int a=5;
+    printf("Before Increment the value of a is equal to %d\n",a);
+    a++;
+    printf(" After Increment of a is equal to 1\n%d",a);
+
+    return 0;
+}
