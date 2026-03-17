@@ -1,0 +1,19 @@
+// this is the simple code for conditional statemnet...
+
+
+#include <stdio.h>
+
+int main()
+{
+  int age;
+  printf("Enter the age");
+  scanf("%d",&age);
+  if(age>18){
+      printf("you can drive");
+  }
+  else{
+      printf("you cannot drive");
+  }
+
+    return 0;
+}
