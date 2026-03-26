@@ -1,0 +1,24 @@
+//print to check the number is armstrong or not
+
+
+#include <stdio.h>
+
+int main()
+{
+  int rem,result=0,n,originalnum;
+  printf("Enter the number");
+  scanf("%d",&n);
+  originalnum=n;
+  while(originalnum!=0){
+      rem=originalnum%10;
+      result=result+rem*rem*rem;
+      originalnum=originalnum/10;
+  }
+  if(result==n){
+      printf("It is armstrong number");
+  }
+  else{
+      printf("Not a armstrong number");
+  }
+    return 0;
+}
