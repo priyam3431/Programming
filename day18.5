@@ -1,0 +1,30 @@
+//here the code is for constructor overloading.....
+
+
+
+#include <iostream>
+using namespace std;
+
+class Car{
+    public:
+    string name;
+    
+    Car(){
+        cout<<" defaultf construtor is called...\n";
+    }
+    Car(string n){
+        name=n;
+    }
+    void display(){
+        cout<<name;
+    }
+};
+
+int main()
+{
+    Car c1;
+    Car c2("priyam");
+    c2.display();
+
+    return 0;
+}
