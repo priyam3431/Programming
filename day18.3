@@ -1,0 +1,36 @@
+//copy constructor in c++(oops)......
+
+
+
+#include <iostream>
+using namespace std;
+
+class Car{
+    public:
+    string name;
+    Car(string n){
+        name=n;
+       
+    }
+    Car(const Car &c){
+        name=c.name;
+    }
+    void display(){
+        cout<<name;
+    }
+};
+
+int main()
+{
+    Car c1("priyam\n");
+
+    
+    Car c2=c1;//  passsing object to the constructor....
+    
+    
+    c1.display();
+    
+    c2.display();
+
+    return 0;
+}
