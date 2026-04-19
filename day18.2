@@ -1,0 +1,30 @@
+//parametrized construtor is called.....
+
+
+
+#include <iostream>
+using namespace std;
+
+class Car{
+    public:
+    string name;
+    Car(string n){
+        name=n;
+        cout<<"pramaterized consturtor is called\n";
+       
+        
+    }
+    void display(){
+        cout<<name;
+    }
+};
+
+int main()
+{
+    Car c1("priyam");  //parametrized cjonstutor is called....
+    
+    
+    c1.display();
+
+    return 0;
+}
