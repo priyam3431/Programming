@@ -1,0 +1,25 @@
+//this pointer concept in c++.....
+
+
+#include <iostream>
+using namespace std;
+
+class Car{
+    public:
+    string name;
+  
+    Car(string name){
+       this->name=name;
+    }
+    void display(){
+        cout<<this->name;
+    }
+};
+
+int main()
+{
+    Car c2("priyam");
+    c2.display();
+
+    return 0;
+}
