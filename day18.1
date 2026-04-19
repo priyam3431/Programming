@@ -1,0 +1,31 @@
+//constructor concept in c++......
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class Car{
+    public:
+    string name;
+    Car(){
+         name="priyam";
+        cout<<"default consturtor is called\n";
+       
+        
+    }
+    void display(){
+        cout<<name;
+    }
+};
+
+int main()
+{
+    Car c1;  //defalut constructor is called when the time of object is created...
+    
+    c1.display();
+
+    return 0;
+}
