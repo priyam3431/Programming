@@ -1,0 +1,24 @@
+//Basic object oriented concept......
+
+
+#include <iostream>
+using namespace std;
+
+class Car{
+    public:
+    string name;
+    int price;
+    void display(){
+        cout<<name<<" "<<price;
+    }
+};
+
+int main()
+{
+    Car c1;
+    c1.name="range rover";
+    c1.price=1000000;
+    c1.display();
+
+    return 0;
+}
