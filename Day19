@@ -1,0 +1,35 @@
+//constructor in cpp.....
+
+
+
+#include <iostream>
+using namespace std;
+
+class Student {
+public:
+    string name;
+    int age;
+
+    // Default constructor
+    Student() : name("Unknown"), age(0) {}
+
+    // Parameterized constructor
+    Student(string n, int a) : name(n), age(a) {}
+
+    // Copy constructor
+    Student(const Student& s) : name(s.name), age(s.age) {}
+
+    void display() {
+        cout << "Name: " << name << ", Age: " << age << endl;
+    }
+};
+
+int main() {
+    Student s1;                    // Default
+    Student s2("Alice", 20);       // Parameterized
+    Student s3(s2);                // Copy
+
+    s1.display();   // Name: Unknown, Age: 0
+    s2.display();   // Name: Alice, Age: 20
+    s3.display();   // Name: Alice, Age: 20
+}
