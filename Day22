@@ -1,0 +1,48 @@
+// this code in cpp basic understanding of class and object...
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Dog {
+    // Attributes (data members)
+    public:
+        string name;
+        string breed;
+        int age;
+
+    // Constructor
+    Dog(string n, string b, int a) {
+        name = n;
+        breed = b;
+        age = a;
+    }
+
+    // Method (member function)
+    void bark() {
+        cout << name << " says: Woof!" << endl;
+    }
+
+    void display() {
+        cout << "Name:  " << name  << endl;
+        cout << "Breed: " << breed << endl;
+        cout << "Age:   " << age   << endl;
+    }
+};
+
+int main() {
+    // Creating objects
+    Dog dog1("Bruno", "Labrador", 3);
+    Dog dog2("Max", "Poodle", 5);
+
+    dog1.display();
+    dog1.bark();
+
+    cout << "---" << endl;
+
+    dog2.display();
+    dog2.bark();
+
+    return 0;
+}
