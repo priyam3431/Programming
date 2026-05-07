@@ -1,0 +1,30 @@
+
+
+#include <iostream>
+using namespace std;
+
+class Student {
+private:
+    int marks;   // data hidden
+
+public:
+    // setter function
+    void setMarks(int m) {
+        marks = m;
+    }
+
+    // getter function
+    int getMarks() {
+        return marks;
+    }
+};
+
+int main() {
+    Student s;
+
+    s.setMarks(90);
+
+    cout << "Marks = " << s.getMarks();
+
+    return 0;
+}
