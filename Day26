@@ -1,0 +1,40 @@
+// Recursion code in c
+
+
+#include <stdio.h>
+
+// 1. Factorial
+int factorial(int n) {
+    if (n == 0 || n == 1) return 1;
+    return n * factorial(n - 1);
+}
+
+// 2. Fibonacci
+int fibonacci(int n) {
+    if (n <= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+// 3. Sum of digits
+int sumOfDigits(int n) {
+    if (n == 0) return 0;
+    return (n % 10) + sumOfDigits(n / 10);
+}
+
+// 4. Power
+int power(int base, int exp) {
+    if (exp == 0) return 1;
+    return base * power(base, exp - 1);
+}
+
+// 5. Binary Search
+int binarySearch(int arr[], int low, int high, int target) {
+    if (low > high) return -1;
+    int mid = (low + high) / 2;
+    if (arr[mid] == target) return mid;
+    if (arr[mid] > target) return binarySearch(arr, low, mid - 1, target);
+    return binarySearch(arr, mid + 1, high, target);
+}
+
+// 6. Tower of Hanoi
+void hanoi(int n, char f
