@@ -1,0 +1,34 @@
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int arr[2][3];
+
+    // Input
+    cout << "Enter elements:\n";
+
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 3; j++) {
+            cin >> arr[i][j];
+        }
+    }
+
+    int largest = arr[0][0];
+
+    // Largest find karna
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 3; j++) {
+
+            if(arr[i][j] > largest) {
+                largest = arr[i][j];
+            }
+        }
+    }
+
+    cout << "Largest element = " << largest;
+
+    return 0;
+}
