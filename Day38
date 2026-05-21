@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+// Recursive function to calculate factorial
+int factorial(int n) {
+    // 1. Base Case: The condition that stops the recursion
+    if (n <= 1) {
+        return 1;
+    }
+    // 2. Recursive Case: The function calls itself with a smaller input
+    else {
+        return n * factorial(n - 1);
+    }
+}
+
+int main() {
+    int number = 5;
+    cout << "Factorial of " << number << " is: " << factorial(number) << endl;
+    return 0;
+}
