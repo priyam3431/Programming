@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // 1. Declare and initialize a 2x3 array (2 rows, 3 columns)
+    int arr[2][3] = {
+        {10, 20, 30},
+        {40, 50, 60}
+    };
+
+    // 2. Access and print elements using nested loops
+    cout << "2D Array Elements:" << endl;
+    for (int i = 0; i < 2; i++) {       // Outer loop for rows
+        for (int j = 0; j < 3; j++) {   // Inner loop for columns
+            cout << arr[i][j] << " ";
+        }
+        cout << endl; // Move to next line after each row
+    }
+
+    return 0;
+}
