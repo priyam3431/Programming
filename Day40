@@ -1,0 +1,15 @@
+
+
+#include <iostream>
+#include <string>
+#include <algorithm> // Required for reverse()
+
+int main() {
+    std::string str = "Hello World";
+    
+    // std::reverse(start_iterator, end_iterator)
+    std::reverse(str.begin(), str.end());
+    
+    std::cout << "Reversed string: " << str << std::endl;
+    return 0;
+}
