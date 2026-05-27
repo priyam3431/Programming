@@ -1,0 +1,27 @@
+
+
+#include <iostream>
+using namespace std;
+
+// Recursive function for sum
+int sum(int n)
+{
+    // Base condition
+    if(n == 1)
+        return 1;
+
+    // Recursive call
+    return n + sum(n - 1);
+}
+
+int main()
+{
+    int n;
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    cout << "Sum = " << sum(n);
+
+    return 0;
+}
