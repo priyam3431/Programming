@@ -1,0 +1,9 @@
+
+
+returnType functionName(parameters) {
+    if (base_condition) {
+        return value;
+    }
+
+    return functionName(smaller_problem);
+}
