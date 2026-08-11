@@ -1,0 +1,50 @@
+
+
+class Solution {
+public:
+    vector<string> ans;
+
+    void solve(string &s, int index, int parts, string current) {
+
+        // 4 parts ban gaye
+        if (parts == 4) {
+            if (index == s.size()) {
+                current.pop_back(); // last '.'
+                ans.push_back(current);
+            }
+            return;
+        }
+
+        // 1, 2, 3 digits try karo
+        for (int len = 1; len <= 3; len++) {
+
+            if (index + len > s.size())
+                break;
+
+            string part = s.substr(index, len);
+
+            // Leading zero check
+            if (part.size() > 1 && part[0] == '0')
+                continue;
+
+            // 0-255 check
+            int num = stoi(part);
+
+            if (num > 255)
+                continue;
+
+            solve(s, index + len, parts + 1,
+                 current + part + ".");
+        }
+    }
+
+    vector<string> restoreIpAddresses(string s) {
+
+        if (s.size() < 4 || s.size() > 12)
+            return {};
+
+        solve(s, 0, 0, "");
+
+        return ans;
+    }
+};
