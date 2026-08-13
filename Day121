@@ -1,0 +1,49 @@
+
+
+class Solution {
+public:
+    bool isMatch(string s, string p) {
+        int n = s.size();
+        int m = p.size();
+
+        vector<vector<int>> dp(n + 1, vector<int>(m + 1, -1));
+
+        function<bool(int, int)> solve = [&](int i, int j) -> bool {
+
+            // Pattern khatam
+            if (j == m)
+                return i == n;
+
+            // Already calculated
+            if (dp[i][j] != -1)
+                return dp[i][j] == 1;
+
+            // Current character match?
+            bool firstMatch = (i < n &&
+                (s[i] == p[j] || p[j] == '.'));
+
+            bool ans;
+
+            // Next character is '*'
+            if (j + 1 < m && p[j + 1] == '*') {
+
+                // 1. '*' = zero occurrence
+                // 2. '*' = one or more occurrence
+                ans = solve(i, j + 2) ||
+                      (firstMatch && solve(i + 1, j));
+
+            } else {
+
+                // Normal character or '.'
+                ans = firstMatch &&
+                      solve(i + 1, j + 1);
+            }
+
+            dp[i][j] = ans ? 1 : 0;
+
+            return ans;
+        };
+
+        return solve(0, 0);
+    }
+};
