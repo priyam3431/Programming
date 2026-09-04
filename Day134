@@ -1,0 +1,54 @@
+
+
+class Solution {
+public:
+    string fractionToDecimal(int numerator, int denominator) {
+        
+        if (numerator == 0)
+            return "0";
+
+        string ans = "";
+
+        // Negative sign
+        if ((numerator < 0) ^ (denominator < 0))
+            ans += "-";
+
+        // long long because INT_MIN can overflow
+        long long n = llabs((long long)numerator);
+        long long d = llabs((long long)denominator);
+
+        // Integer part
+        ans += to_string(n / d);
+
+        long long rem = n % d;
+
+        // No decimal part
+        if (rem == 0)
+            return ans;
+
+        ans += ".";
+
+        // remainder -> position in ans
+        unordered_map<long long, int> mp;
+
+        while (rem != 0) {
+
+            // Same remainder means repetition
+            if (mp.count(rem)) {
+                ans.insert(mp[rem], "(");
+                ans += ")";
+                break;
+            }
+
+            mp[rem] = ans.size();
+
+            rem *= 10;
+
+            ans += to_string(rem / d);
+
+            rem %= d;
+        }
+
+        return ans;
+    }
+};
